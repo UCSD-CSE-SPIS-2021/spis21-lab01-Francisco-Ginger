@@ -1,0 +1,21 @@
+#go to bottom right corner
+0 ***x -> S 0
+0 ***S -> E 1
+1 *x** -> E 1
+1 *E*S -> X 2
+
+# when in state 0 and N is free go N
+# stay in state 0
+2 x*** -> N 2 
+
+# when in state 0 and north is blocked go W (left)
+# change state to 1
+2 N*** -> W 3
+
+# when in state 1 and S is free go S
+# stay in state 1
+3 ***x -> S 3
+
+# when in state 1 and S is blocked stop
+# change to state 0
+3 ***S -> X 2
